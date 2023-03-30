@@ -1,0 +1,326 @@
+:root {
+  --maincolor: rgb(239, 200, 3);
+}
+
+* {
+  
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+/* start setting Box */
+
+.setting-box {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  background-color: #fff;
+  width: 250px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: 0.6s;
+
+}
+
+.setting-box.open {
+  left: 0;
+}
+
+.setting-box .toggle-settings {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+}
+
+.setting-box .toggle-settings .fa-gear {
+  padding: 8px 0;
+  width: 30px;
+}
+
+.setting-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+.option-box h4 {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+}
+.option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.option-box .colors-list li {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  border: 3px solid rgb(255, 255, 255);
+}
+.option-box .colors-list li.active {
+  border-color: rgb(2, 2, 2);
+}
+.option-box .colors-list li:first-child {
+  background-color: #efc803;
+}
+.option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.option-box .colors-list li:nth-child(3) {
+  background-color: #1e8ee9;
+}
+.option-box .colors-list li:nth-child(4) {
+  background-color: #1ee973;
+}
+.option-box .colors-list li:nth-child(5) {
+  background-color: #df07f3;
+}
+.setting-box .option-box .Yes,
+.setting-box .option-box .No {
+  width: 50px;
+  background-color: #009688;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.setting-box .randombackground span.active {
+  opacity: 1;
+}
+
+/* end setting Box */
+
+/* start landing page  */
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../image/01.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing-page .overlay {
+  background-color: rgb(0 0 0 / 30%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.header-area {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.header-area .logo {
+  width: 300px;
+  padding: 15px;
+  font-weight: bold;
+}
+.header-area .links {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 20px;
+  width: 100%;
+  text-align: right;
+  font-size: 15px;
+}
+.header-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.header-area .links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.header-area .links li a:hover,
+.header-area .links li a.active {
+  color: var(--maincolor);
+}
+.introdaction-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+.introdaction-text h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+.introdaction-text h1 span {
+  color: var(--maincolor);
+}
+.introdaction-text p {
+  line-height: 1.6;
+  font-size: 20px;
+  margin: 0;
+}
+/* end landing page  */
+
+/* Start About Us */
+.about-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.about-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+.about-us .info-box h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--maincolor);
+}
+.about-us .info-box p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.about-us .image-box {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+}
+.about-us .image-box img {
+  width: 300px;
+  padding-top: 39px;
+}
+
+/* End About Us */
+
+/* Start Our Skills */
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.skills h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--maincolor);
+  margin: 0 0 50px;
+  text-align: center;
+}
+.skills .skill-box {
+  background-color: #fff;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+.skill-box .skill-progress {
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+}
+.skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--maincolor);
+  transition: all 0.5s;
+}
+
+/* End Our Skills */
+/* Start gallery */
+.gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.gallery h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--maincolor);
+    margin: 0 0 50px;
+    text-align: center;
+}
+.gallery .images-box {
+    text-align: center;
+}
+.gallery .images-box img {
+    width: 200px;
+    padding: 3px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    margin: 5px;
+    cursor: pointer;
+}
+.popup-overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.popup-box{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1001;
+}
+.popup-box h3{
+  font-weight: bold;
+  text-align:center;
+  margin: 0 0 20px;
+  color: var(--maincolor);
+}
+.popup-box img{
+    max-width: 100%;
+}
+.close-button{
+ position: absolute;
+ top: -15px;
+ right: -15px;
+ background-color: var(--maincolor);
+ width: 40px;
+height: 40px;
+line-height: 40px;
+ text-align: center;
+ font-size: 20px;
+ color: #fff;
+ cursor: pointer;
+ font-weight: bold;
+ font-family: Arial, Helvetica, sans-serif;
+ border-radius: 50%;
+}
+/* End gallery */
